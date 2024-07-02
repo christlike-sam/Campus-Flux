@@ -1,27 +1,36 @@
 import React, { useState } from 'react';
 import '../css/App.css';
-import Signup from './Signup';
+import Newform from './Newform';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Form() {
-  const [showSignup, setShowSignup] = useState(false);
+  const [showNewform, setShowNewform] = useState(false);
+  const [formType, setFormType] = useState('');
 
-  const handleButtonClick = () => {
-    setShowSignup(true);
+  const handleLoginClick = () => {
+    setFormType('login');
+    setShowNewform(true);
+  };
+
+  const handleJoinClick = () => {
+    setFormType('signup');
+    setShowNewform(true);
+  };
+
+  const handleTestClick = () => {
+    setFormType('test');
+    setShowNewform(true);
   };
 
   return (
-    <div className={`container ${showSignup ? 'sign-up-mode' : ''}`}>
-      {!showSignup ? (
-        <div className="forms-container">
-          <div className="signin-signup">
-            <form onSubmit={(e) => e.preventDefault()}>
-              <button type="button" className="btn" onClick={handleButtonClick}>Login</button>
-              <button type="button" className="btn" onClick={handleButtonClick}>Join</button>
-            </form>
-          </div>
-        </div>
+    <div>
+      {showNewform ? (
+        <Newform formType={formType} />
       ) : (
-        <Signup />
+        <form onSubmit={(e) => e.preventDefault()}>
+          <button type="button" className="button" onClick={handleLoginClick}>Login</button>
+          <button type="button" className="button" onClick={handleJoinClick}>Join</button>
+        </form>
       )}
     </div>
   );
