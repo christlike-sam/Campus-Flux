@@ -1,0 +1,15 @@
+.home img{
+    position:fixed;
+    width: auto;
+    height:100%;
+    border-radius: 10px;
+    opacity: 20%;
+    top: 120px;
+    right:10px
+}
+.home-text{
+    color: rgb(0, 53, 62);
+    margin-left: 20px;
+    text-align: left;
+
+}
