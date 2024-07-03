@@ -24,3 +24,29 @@
   text-align: center;
     
 }
+.plans{
+  display:flex;
+  justify-content: center;
+}
+.freeplan{
+  display: flex;
+  box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.2) ;
+  padding: 30px;
+  margin-left: 100px;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  justify-content: center;
+}
+.premiumplan{
+  display: flex;
+  box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.2) ;
+  padding: 30px;
+  margin-left: 100px;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  justify-content: center;
+}
