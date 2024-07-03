@@ -6,8 +6,7 @@
    
 }
 .header{
-    display: flex;
-    flex-direction: row;
+    display: inline;
     background-color: rgb(0, 69, 90);
     padding: 10px;
     color: white;
@@ -17,13 +16,13 @@
 
 }   
 .nav{
-    display: block;
-    position: absolute;
+    display: inline;
+    position: fixed;
     right: 20px;
     color: azure;
     justify-items: center;
     top: 30px;
-    overflow: hidden;
+    
    
 }
 .items a{
@@ -31,5 +30,8 @@ color: azure;
 padding: 10px;
 margin-top: 20px;
 text-decoration: none;
+display: inline;
+position: fixed;
+overflow: hidden;
 }
    

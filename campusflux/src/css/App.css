@@ -1,13 +1,15 @@
 @import '../css/font-awesome.min.css';
 
 .form {
-  display: flex;  
+  display: flex;
+  flex-direction: row;  
   align-items: center;
   margin-top: 10px;
   justify-content: left;
   margin-left: 20px;
 }
 .button {
+
     color: white;
     border: 10px;
     margin: 10px;

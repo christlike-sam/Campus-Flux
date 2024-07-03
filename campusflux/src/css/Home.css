@@ -1,3 +1,9 @@
+.home{
+
+
+    
+}
+
 .home img{
     position:fixed;
     width: auto;
@@ -9,7 +15,12 @@
 }
 .home-text{
     color: rgb(0, 53, 62);
-    margin-left: 20px;
-    text-align: left;
-
+    margin-left:20px;
+    
+    
+}
+.abt-text{
+    margin-top: 10px;
+  margin-left:20px;
+    
 }

@@ -28,8 +28,10 @@ export default function Form() {
         <Newform formType={formType} />
       ) : (
         <form onSubmit={(e) => e.preventDefault()}>
+          <div className='btnlayout'>
           <button type="button" className="button" onClick={handleLoginClick}>Login</button>
           <button type="button" className="button" onClick={handleJoinClick}>Join</button>
+          </div>
         </form>
       )}
     </div>
