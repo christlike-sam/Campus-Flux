@@ -22,7 +22,7 @@
     color: azure;
     justify-items: center;
     top: 30px;
-    
+    overflow: hidden;
    
 }
 .items a{
