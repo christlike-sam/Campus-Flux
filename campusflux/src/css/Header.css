@@ -17,19 +17,19 @@
 
 }   
 .nav{
-    display: inline;
-    position: fixed;
-    right: 20px;
     color: azure;
-    justify-items: center;
-    top: 30px;
     overflow: hidden;
+    margin-top: 10px;
    
 }
-.items a{
-color: azure;
-padding: 10px;
-margin-top: 20px;
-text-decoration: none;
+.nav a{
+    overflow: hidden;
+    color: azure;
+    padding-inline: 10px;
+    text-decoration: none;
+    display: inline-block;
+    
+    
 }
+
    
