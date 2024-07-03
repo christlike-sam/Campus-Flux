@@ -41,6 +41,7 @@
 }
 .premiumplan{
   display: flex;
+  flex-direction: inherit;
   box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.2) ;
   padding-top: 30px;
   background-color: rgb(255, 255, 255);
