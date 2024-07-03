@@ -49,4 +49,28 @@
 .nav .icon {
     display: none;
   }
-   
+   /* Hide navigation items on small screens */
+@media screen and (max-width: 600px) {
+  .nav a {
+    display: none;
+  }
+
+  .nav .icon {
+    display: inline-block;
+    position: relative;
+    left: 80%;
+  }
+
+  .nav.open a {
+    display: block;
+    text-align: left;
+    padding: 14px;
+    width: 100%;
+  }
+
+  .nav.open .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
