@@ -20,7 +20,7 @@
 .nav{
     color: azure;
     margin-top: 10px;
-      
+    overflow: hidden;  
    
 }
 .nav a{
