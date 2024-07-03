@@ -12,13 +12,13 @@ export default function Navbar() {
     <nav>
       <div className='nav'>
         <ul className={isOpen ? 'open' : ''}>
-          <a href="#home">Home</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-          <div className="icon" onClick={toggleMenu}>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li className="icon" onClick={toggleMenu}>
             <i className="fa fa-bars"></i>
-          </div>
+          </li>
         </ul>
       </div>
     </nav>
