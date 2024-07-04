@@ -6,13 +6,13 @@ export default function Dashboard(){
            {/* <h1 className="h1">CHRISTLIKE SAM</h1>  */}
            
                 <div className="dash">
-             <h1> PANEL </h1>       
+             <h1> Panel </h1>       
           
-           <div className="items">My Earnings<br/>No Of Referees<br/>Subscription</div>
+           <div className="items">My Earnings<br/> $3500<br/>No Of Referees<br/>73<br/>Subscription<br/>Premium Plan</div>
         
         </div>
         <div className="dash">
-           <h1>TASKS </h1>
+           <h1>Tasks </h1>
            <div className="taskitems">
             <li>Task 1</li>
             <li>Task 2</li>
