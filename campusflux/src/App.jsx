@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Signup from './components/Signup';
 import Header from './components/Header';
-import Navbar1 from './components/Navbar1';
+import Footer from './components/Footer'
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -43,6 +43,7 @@ export default function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
+          <Footer/>
         </div>
       </div>
     </Router>
