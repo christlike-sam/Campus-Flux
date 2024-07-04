@@ -75,6 +75,10 @@ const SignUpForm = () => (
   <form action="" className="sign-up-form">
     <h2 className="title">Sign Up</h2>
     <div className="input-field">
+      <i className="fas fa-id-card"></i>
+      <input type="text" placeholder="Referer Code" />
+    </div>
+    <div className="input-field">
       <i className="fas fa-user"></i>
       <input type="text" placeholder="Username" />
     </div>

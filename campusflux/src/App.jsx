@@ -1,19 +1,50 @@
-import Header from "./components/Header";
-import Form from "./components/Form";
-import Footer from "./components/Footer"
-import Home from "./components/Home";
-import "./Index.css"
-import Signup from "./components/Signup";
-function App() {
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// Import your components
+import "./css/Navigation.css"
+import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import Signup from './components/Signup';
+import Header from './components/Header';
+import Navbar1 from './components/Navbar1';
+
+export default function App() {
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
-    <div className="body">
-      <Header />
-      <Footer/>
-      <Form/> 
-      <Home/> 
-      
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <div>
+          <nav className='nav'>
+            <ul className={navOpen ? 'open' : ''}>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+              <li>
+                <Link to="/signup">Signup</Link>
+              </li>
+            </ul>
+            <a
+              href="#!"
+              className="icon"
+              onClick={() => setNavOpen(!navOpen)}
+            >
+              &#9776;
+            </a>
+          </nav>
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
-
-export default App;

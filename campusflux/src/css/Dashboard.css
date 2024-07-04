@@ -1,0 +1,46 @@
+.dashboard{
+    justify-content: space-around;
+    display:flex;
+    flex-direction: row;
+    margin-top:50px ;
+    
+}
+
+.panel{
+    /* margin-left:30px; */
+}
+
+.h1{
+    color: rgb(0, 69, 90);
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.dash{
+    color: rgb(0, 69, 90);
+    text-align: center;
+    border-radius: 10px;
+    height:400px;
+    width: 350px;
+    box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.1) ;
+}
+.dash h1{
+    box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.1) ;
+}
+.items{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 4;
+}
+
+.taskitems{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+}

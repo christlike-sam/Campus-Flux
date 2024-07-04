@@ -13,81 +13,10 @@
 .header h1 {
   margin-left: 10px;
   margin-top: 20px;
-  left: 80px;
   text-align: center;
-}
-
-.nav {
-  color: azure;
-  margin-top: 10px;
-}
-
-.nav ul {
-  list-style: none;  /* Remove the default list styling */
-  margin: 0;
-  padding: 0;
-  display: flex;  /* Ensure items are in a row by default */
-  flex-direction: row;
-}
-
-.nav ul.open {
-  flex-direction:;  /* Stack items vertically when open on small screens */
-}
-
-.nav a {
-  text-align: center;
-  overflow: hidden;
-  color: azure;
-  padding-inline: 10px;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  left: 10%;
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 20px;
 }
 
 .header img {
   padding: none;
 }
 
-.nav a:hover {
-  background-color: azure;
-  color: black;
-}
-
-.nav a.active {
-  background-color: #ffffff;
-  color: azure;
-}
-
-.nav .icon {
-  display: none;
-}
-
-/* Hide navigation items on small screens */
-@media screen and (max-width: 600px) {
-  .nav a {
-    display: none;
-  }
-
-  .nav .icon {
-    display: inline-block;
-    position: relative;
-    left: 80%;
-  }
-
-  .nav.open a {
-    display: block;
-    text-align: left;
-    padding: 14px;
-    width: 100%;
-  }
-
-  .nav.open .icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
