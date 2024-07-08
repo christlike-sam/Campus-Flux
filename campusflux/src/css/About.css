@@ -1,0 +1,17 @@
+.companyinfo{
+    display: flex;
+    box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.2) ;
+    padding-top: 0px;
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    /* justify-content: center; */
+    margin-top:10px;
+    margin-right:30px;
+    padding-left: 10px;
+   
+}
+.companyinfo h2{
+    color: rgb(209, 0, 21);
+}

@@ -7,7 +7,8 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Signup from './components/Signup';
 import Header from './components/Header';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import About from './components/About';
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -28,6 +29,9 @@ export default function App() {
               <li>
                 <Link to="/signup">Signup</Link>
               </li>
+              <li>
+              <Link to="/aboutus">About Us</Link>
+            </li>
             </ul>
             <a
               href="#!"
@@ -42,6 +46,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/aboutus" element={<About />} />
           </Routes>
           <Footer/>
         </div>
