@@ -27,11 +27,11 @@ export default function App() {
                 <Link to="/dashboard">Dashboard</Link>
               </li>
               <li>
-                <Link to="/signup">Signup</Link>
-              </li>
-              <li>
               <Link to="/aboutus">About Us</Link>
             </li>
+            <li>
+                <Link to="/signup">Signup</Link>
+              </li>
             </ul>
             <a
               href="#!"

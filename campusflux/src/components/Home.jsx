@@ -10,9 +10,27 @@ export default function Home(){
                 Quick Payouts - Quickly and conveniently withdraw profits to your M-Pesa.<br />
                 Reliability - We are the top remote job company in Africa.</ul> */}
                 <div className="freeplan">
-                  Free Plan
+                  <h1>Free Plan</h1>
+                  <ul>
+                  <li>Unlimited Tasks</li>
+                  <li>Unlimited Withdrawals</li>
+                  <li>Earn through Refferals</li>
+                  <li>Eligible for Gifts</li>
+                  <li>Task 5</li>
+                  <input type="submit" value="Start Free Plan" className="btn" />
+                  </ul>
                 </div>
-                <div className="premiumplan"> Premium Plan</div>
+                <div className="premiumplan">
+                  <h1>Premium Plan</h1> 
+                  <ul>
+                  <li>Task 1</li>
+                  <li>Task 2</li>
+                  <li>Task 3</li>
+                  <li>Task 4</li>
+                  <li>Task 5</li>
+                  <input type="submit" value="Get Premium Plan" className="btn" />
+                  </ul>
+                </div>
                 </div>
     </div>
   )

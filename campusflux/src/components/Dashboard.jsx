@@ -1,3 +1,4 @@
+import { useBeforeUnload } from "react-router-dom"
 import "../css/Dashboard.css"
 
 export default function Dashboard(){
@@ -8,7 +9,15 @@ export default function Dashboard(){
                 <div className="dash">
              <h1> Panel </h1>       
           
-           <div className="items">My Earnings<br/> $3500<br/>No Of Referees<br/>73<br/>Subscription<br/>Premium Plan</div>
+           <div className="items" >
+            <li><b>My Earnings</b></li>
+            <li>$3500</li>
+            <li><b>No Of Referees</b></li>
+            <li>73</li>
+            <li><b>Subscription</b></li>
+            <li>Premium Plan</li>
+            <input type="submit" value="Withdraw" className="btn solid" />
+            </div>
         
         </div>
         <div className="dash">
