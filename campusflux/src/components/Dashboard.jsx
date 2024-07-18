@@ -6,7 +6,7 @@ export default function Dashboard(){
                 <div className="dashboard">
            {/* <h1 className="h1">CHRISTLIKE SAM</h1>  */}
            
-                <div className="dash">
+                <div className="pdash">
              <h1> Panel </h1>       
           
            <div className="items" >
@@ -16,11 +16,11 @@ export default function Dashboard(){
             <li>73</li>
             <li><b>Subscription</b></li>
             <li>Premium Plan</li>
-            <input type="submit" value="Withdraw" className="btn solid" />
+            <input type="submit" value="Withdraw" className="wbtn" />
             </div>
         
         </div>
-        <div className="dash">
+        <div className="tdash">
            <h1>Tasks </h1>
            <div className="taskitems">
             <li>Task 1</li>

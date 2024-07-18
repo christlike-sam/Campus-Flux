@@ -13,24 +13,28 @@ import About from './components/About';
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
 
+  const handleNavLinkClick = () => {
+    setNavOpen(false);
+  };
+
   return (
     <Router>
       <div>
         <Header />
         <div>
-          <nav className='nav'>
-            <ul className={navOpen ? 'open' : ''}>
+          <nav className={`nav ${navOpen ? 'open' : ''}`}>
+            <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={handleNavLinkClick}>Home</Link>
               </li>
               <li>
-                <Link to="/dashboard">Dashboard</Link>
+                <Link to="/dashboard" onClick={handleNavLinkClick}>Dashboard</Link>
               </li>
               <li>
-              <Link to="/aboutus">About Us</Link>
-            </li>
-            <li>
-                <Link to="/signup">Signup</Link>
+                <Link to="/aboutus" onClick={handleNavLinkClick}>About Us</Link>
+              </li>
+              <li>
+                <Link to="/signup" onClick={handleNavLinkClick}>Signup</Link>
               </li>
             </ul>
             <a

@@ -1,15 +1,19 @@
+body{
+    max-width: 100%;
+    margin: 0;
+    display: block;
+    padding: 0;
+}
 .companyinfo{
     display: flex;
     box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.2) ;
     padding-top: 0px;
     background-color: rgb(255, 255, 255);
-    width: 100%;
+    width: 99%;
     height: 400px;
     border-radius: 20px;
     justify-content: center; 
-    margin-top:10px;
-    margin-right:30px;
-    padding-left: 10px;
+    margin: 10px;
    
 }
 .companyinfo h2{
@@ -27,13 +31,11 @@
     box-shadow: 0px 4px 4px 2px rgb(0, 0, 0, 0.2) ;
     padding-top: 0px;
     background-color: rgb(255, 255, 255);
-    width: 100%;
+    width: 99%;
     height: 400px;
     border-radius: 20px;
     justify-content: center;
-    margin-top:10px;
-    margin-right:30px;
-    padding-left: 10px;  
+    margin: 10px;
 }
 .team h2{
     color: rgb(255, 255, 255);

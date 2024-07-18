@@ -3,7 +3,11 @@ export default function About(){
     return(
         <div>
             <div className="companyinfo">
-                <h2>Company Info</h2>
+                <ul>
+                    <h2>Company Info</h2>
+                    <p>Earn Money Easily and Quickly<br/>Using Your Mobile Phone Or Laptop<br/> Now!!!</p>
+                </ul>
+                
                 </div>
                 <div className="team">
                 <h2>Team</h2>
