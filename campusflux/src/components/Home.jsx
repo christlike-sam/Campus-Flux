@@ -32,9 +32,6 @@ export default function Home(){
                   <input type="submit" value="Get Premium Plan" className="btn" />
                 </div>
                 </div>
-                <span>
-                  <Animation />
-                </span> 
                 <About />
                 
     </div>

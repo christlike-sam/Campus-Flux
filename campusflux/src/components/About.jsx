@@ -1,7 +1,9 @@
 import "../css/About.css"
+import Animation from"../components/Animation"
 export default function About(){
     return(
         <div>
+            <Animation />
             <div className="companyinfo">
                 <ul>
                     <h2>Company Info</h2>
