@@ -4,6 +4,9 @@ body{
   width:100%;
   margin: 0;
   padding: 0;
+  background-image: url("./bg1transparency.png");
+  background-size: cover;
+  background-blend-mode: lighten;
 }
 
 .home img{
@@ -31,6 +34,7 @@ body{
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 .freeplan{
   display: flex;

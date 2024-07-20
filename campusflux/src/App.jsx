@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import "./css/Navigation.css"
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
-import Signup from './components/Signup';
+import Newform from './components/Newform';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
@@ -34,7 +34,7 @@ export default function App() {
                 <Link to="/aboutus" onClick={handleNavLinkClick}>About Us</Link>
               </li>
               <li>
-                <Link to="/signup" onClick={handleNavLinkClick}>Signup</Link>
+                <Link to="/newform" onClick={handleNavLinkClick}>Signup</Link>
               </li>
             </ul>
             <a
@@ -49,7 +49,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/signup" element={<Signup />} />
+            <Route path="/newform" element={<Newform />} />
             <Route path="/aboutus" element={<About />} />
           </Routes>
           <Footer/>
