@@ -1,12 +1,7 @@
-import "../css/Home.css"
-import About from "./About"
-import Animation from "./Animation"
-import Newform from "./Newform"
-
-export default function Home(){
-  return (
-    <div>
-    <div className="body" id="home">
+import "../css/plans.css"
+export default function Plans(){
+    return(
+        <div className="body" id="home">
                     <div className="plans">
                 <div className="freeplan">
                   <h1>Free Plan</h1>
@@ -32,10 +27,6 @@ export default function Home(){
                   <input type="submit" value="Get Premium Plan" className="btn" />
                 </div>
                 </div>
-                <About />
-                
-    </div>
-    {/* <Newform/> */}
-    </div>
-  )
-}
+                </div>
+            )
+            }

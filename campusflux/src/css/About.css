@@ -19,11 +19,11 @@
     align-items: center;
     text-align: justify;
 }
-.about ul{
+.ul{
     margin: 20px;
     padding: 20px;
 }
-.about ul li{
+.li{
     font-size: 24px;
     line-height: 1.5;
     text-align: justify;

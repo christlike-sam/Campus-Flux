@@ -4,6 +4,10 @@
     flex-direction: column;
     z-index: 8;
     min-height: 100vh;
+    border-top: 50px solid;
+    border-bottom: 50px solid;
+    border-color: rgb(15, 109, 126); 
+    background-color:white ;
 }
 .team h2{
     color: rgb(255, 255, 255);
