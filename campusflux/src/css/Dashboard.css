@@ -1,7 +1,3 @@
-body{
-    height: 100%;
-}
-
 .pdash h1{
     font-size: 2.5em;
 }
@@ -12,6 +8,7 @@ body{
     justify-content: center;
     display:flex;
     flex-wrap: wrap;
+    min-height: 180vh;
     gap: 20px;
     margin-top:50px ;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

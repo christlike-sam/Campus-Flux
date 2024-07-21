@@ -9,6 +9,8 @@ import Newform from './components/Newform';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
+import Howitworks from './components/Howitworks';
+import Contact from './components/Contact';
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -19,7 +21,7 @@ export default function App() {
 
   return (
     <Router>
-      <div>
+      <div >
         <Header />
         <div>
           <nav className={`nav ${navOpen ? 'open' : ''}`}>
@@ -36,6 +38,12 @@ export default function App() {
               <li>
                 <Link to="/newform" onClick={handleNavLinkClick}>Signup</Link>
               </li>
+              <li>
+                <Link to="/howitworks" onClick={handleNavLinkClick}>How it works</Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={handleNavLinkClick}>Contact Us</Link>
+              </li>
             </ul>
             <a
               href="#!"
@@ -51,10 +59,14 @@ export default function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/newform" element={<Newform />} />
             <Route path="/aboutus" element={<About />} />
+            <Route path="/howitworks" element={<Howitworks />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
-          <Footer/>
+          </div>
         </div>
-      </div>
+        <Footer/>
     </Router>
+   
   );
+  
 }
