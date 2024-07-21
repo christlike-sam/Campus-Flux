@@ -30,19 +30,19 @@ export default function App() {
                 <Link to="/" onClick={handleNavLinkClick}>Home</Link>
               </li>
               <li>
-                <Link to="/dashboard" onClick={handleNavLinkClick}>Dashboard</Link>
-              </li>
-              <li>
                 <Link to="/aboutus" onClick={handleNavLinkClick}>About Us</Link>
-              </li>
-              <li>
-                <Link to="/newform" onClick={handleNavLinkClick}>Signup</Link>
               </li>
               <li>
                 <Link to="/howitworks" onClick={handleNavLinkClick}>How it works</Link>
               </li>
               <li>
                 <Link to="/contact" onClick={handleNavLinkClick}>Contact Us</Link>
+              </li>
+              <li>
+                <Link to="/newform" onClick={handleNavLinkClick}>Signup</Link>
+              </li>
+              <li>
+                <Link to="/dashboard" onClick={handleNavLinkClick}>Dashboard</Link>
               </li>
             </ul>
             <a

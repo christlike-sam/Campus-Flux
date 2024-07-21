@@ -6,7 +6,7 @@ import Newform from "./Newform"
 export default function Home(){
   return (
     <div>
-    <div className="body" id="home">
+    <div className="body">
                     <div className="plans">
                 <div className="freeplan">
                   <h1>Free Plan</h1>

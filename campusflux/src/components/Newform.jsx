@@ -29,7 +29,7 @@ const Newform = ({ formType }) => {
         <Panel 
           type="left" 
           title="New here?" 
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus natus est." 
+          description="It's your time to make money! Click the button below to create an account. Fill in the referrer code if someone referred you or use the default referal code A001" 
           buttonText="Sign Up" 
           imgSrc="./img/log.svg" 
           buttonId="sign-up-btn" 
@@ -38,7 +38,7 @@ const Newform = ({ formType }) => {
         <Panel 
           type="right" 
           title="One of us?" 
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus natus est." 
+          description="Welcome back and earn more! Click the button below if you already have an account with us to Sign in to your account" 
           buttonText="Sign In" 
           imgSrc="./img/register.svg" 
           buttonId="sign-in-btn" 
