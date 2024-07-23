@@ -41,9 +41,9 @@ export default function App() {
               <li>
                 <Link to="/newform" onClick={handleNavLinkClick}>Signup</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/dashboard" onClick={handleNavLinkClick}>Dashboard</Link>
-              </li>
+              </li> */}
             </ul>
             <a
               href="#!"

@@ -1,6 +1,7 @@
 import '../css/Howitworks.css'
 export default function Howitworks(){
     return(
+        <div>
         <div className="hiw">
          <h2>
          How It Works   
@@ -21,6 +22,7 @@ export default function Howitworks(){
                 <p>On the dashbord check your earnings and conveniently withdraw to your M-pesa</p>
             </li>
             </ol>  
+        </div>
         </div>
     )
 }
