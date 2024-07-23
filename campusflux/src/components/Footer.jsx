@@ -4,6 +4,7 @@ export default function Footer(){
   return (
     <div className="footer">
       <h1>Copyright: Campus Flux 2024</h1>
+      {/* <div className="footerc">
       <ul>
         <li>FACEBOOK</li>
         <li>INSTAGRAM</li>
@@ -18,7 +19,7 @@ export default function Footer(){
         <li>Team</li>
         </ol>
         </span>
-        
+        </div> */}
     </div>
   )
 }
