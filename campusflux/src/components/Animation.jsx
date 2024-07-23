@@ -13,7 +13,7 @@ export default function Animation() {
     return (
         <div className="animation">
             <span>
-                Earn Money Easily and Quickly Using Your Mobile Phone Or Laptop Now!!!
+                <p>Earn Money Easily and Quickly Using Your Mobile Phone Or Laptop Now!!!</p>
                 <input 
                     type="button" 
                     value="Start Free Plan" 
