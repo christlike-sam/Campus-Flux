@@ -9,10 +9,10 @@ input {
 
 .container {
   position: relative;
-  width: 100%;
   background-color: #fff;
   min-height: 120vh;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .forms-container {
