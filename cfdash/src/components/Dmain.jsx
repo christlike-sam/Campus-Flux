@@ -4,7 +4,6 @@ export default function Dmain(){
     return(
         <div className="dmain">
             <div >
-            <h1>Hello,</h1>
                 <Dheader />
                 </div>
                 <ul>
