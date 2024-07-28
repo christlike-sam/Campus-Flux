@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Import your components
-import "./css/Navigation.css"
+import './css/Navigation.css';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Newform from './components/Newform';
@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <Router>
-      <div >
+      <div>
         <Header />
         <div>
           <nav className={`nav ${navOpen ? 'open' : ''}`}>
@@ -57,16 +57,15 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/newform" element={<Newform />} />
+            <Route path="/newform" element={<Newform formType="signup" />} />
+            <Route path="/login" element={<Newform formType="signin" />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/howitworks" element={<Howitworks />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          </div>
         </div>
-        <Footer/>
+        <Footer />
+      </div>
     </Router>
-   
   );
-  
 }
