@@ -28,22 +28,22 @@ const Newform = ({ formType }) => {
         </div>
       </div>
       <div className="panels-container">
-        <Panel 
-          type="left" 
-          title="New here?" 
-          description="It's your time to make money! Click the button below to create an account. Fill in the referrer code if someone referred you or use the default referral code A001" 
-          buttonText="Sign Up" 
-          imgSrc="./img/log.svg" 
-          buttonId="sign-up-btn" 
+        <Panel
+          type="left"
+          title="New here?"
+          description="It's your time to make money! Click the button below to create an account. Fill in the referrer code if someone referred you or use the default referral code A001"
+          buttonText="Sign Up"
+          imgSrc="./img/log.svg"
+          buttonId="sign-up-btn"
           onClick={handleSignUpClick}
         />
-        <Panel 
-          type="right" 
-          title="One of us?" 
-          description="Welcome back and earn more! Click the button below if you already have an account with us to Sign in to your account" 
-          buttonText="Sign In" 
-          imgSrc="./img/register.svg" 
-          buttonId="sign-in-btn" 
+        <Panel
+          type="right"
+          title="One of us?"
+          description="Welcome back and earn more! Click the button below if you already have an account with us to Sign in to your account"
+          buttonText="Sign In"
+          imgSrc="./img/register.svg"
+          buttonId="sign-in-btn"
           onClick={handleSignInClick}
         />
       </div>

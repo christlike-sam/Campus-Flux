@@ -40,43 +40,68 @@ app.get('/', (req, res) => {
 
 // Sign Up endpoint
 app.post('/signup', (req, res) => {
-    const { refererCode, username, email, password } = req.body;
-    
+    const {
+        refererCode,
+        username,
+        email,
+        password
+    } = req.body;
+
     // Check if email already exists
     const checkEmailSql = 'SELECT * FROM signup WHERE email = ?';
     db.query(checkEmailSql, [email], (err, results) => {
         if (err) {
-            return res.status(500).send({ error: err });
+            return res.status(500).send({
+                error: err
+            });
         }
         if (results.length > 0) {
-            return res.status(400).send({ error: 'Email already exists' });
+            return res.status(400).send({
+                error: 'Email already exists'
+            });
         }
-        
+
         // If email does not exist, proceed with registration
         const sql = 'INSERT INTO signup (refererCode, username, email, password) VALUES (?, ?, ?, ?)';
         db.query(sql, [refererCode, username, email, password], (err, result) => {
             if (err) {
-                return res.status(500).send({ error: err });
+                return res.status(500).send({
+                    error: err
+                });
             }
-            res.send({ success: true, message: 'User registered successfully!' });
+            res.send({
+                success: true,
+                message: 'User registered successfully!'
+            });
         });
     });
 });
 
 // Login endpoint
 app.post('/login', (req, res) => {
-    const { email, password } = req.body;
+    const {
+        email,
+        password
+    } = req.body;
     const sql = 'SELECT * FROM signup WHERE email = ? AND password = ?';
     'INSERT INTO login (email, password) VALUES (?, ?)';
-    
+
     db.query(sql, [email, password], (err, results) => {
         if (err) {
-            return res.status(500).send({ error: err });
+            return res.status(500).send({
+                error: err
+            });
         }
         if (results.length > 0) {
-            res.send({ success: true, message: 'Login successful!' });
+            res.send({
+                success: true,
+                message: 'Login successful!'
+            });
         } else {
-            res.status(401).send({ success: false, message: 'Invalid email or password.' });
+            res.status(401).send({
+                success: false,
+                message: 'Invalid email or password.'
+            });
         }
     });
 });

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Router } from 'react-router-dom'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 
 // Import your components
 import '../css/dheader.css'

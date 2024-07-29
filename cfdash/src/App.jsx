@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Dmain from '../src/components/Dmain'
+import Dmain from './components/Dmain'
 function App() {
   return (
       <div>

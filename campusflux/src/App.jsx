@@ -3,14 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Import your components
 import './css/Navigation.css';
-import Home from './components/Home';
-import Dashboard from './components/Dashboard';
-import Newform from './components/Newform';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './components/About';
-import Howitworks from './components/Howitworks';
-import Contact from './components/Contact';
+import Home from './components/Home.jsx';
+// import Dashboard from './components/Dashboard.jsx';
+import Newform from './components/Newform.jsx';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import About from './components/About.jsx';
+import Howitworks from './components/Howitworks.jsx';
+import Contact from './components/Contact.jsx';
+// import User from './cfdash/src/User.jsx'
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function App() {
                 <Link to="/newform" onClick={handleNavLinkClick}>Signup</Link>
               </li>
               {/* <li>
-                <Link to="/dashboard" onClick={handleNavLinkClick}>Dashboard</Link>
+                <Link to="/user" onClick={handleNavLinkClick}>Dashboard</Link>
               </li> */}
             </ul>
             <a
@@ -56,12 +57,13 @@ export default function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            {/* <Route path="/user" element={<User />} /> */}
             <Route path="/newform" element={<Newform formType="signup" />} />
             <Route path="/login" element={<Newform formType="signin" />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/howitworks" element={<Howitworks />} />
             <Route path="/contact" element={<Contact />} />
+          
           </Routes>
         </div>
         <Footer />
