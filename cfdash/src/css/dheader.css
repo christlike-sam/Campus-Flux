@@ -1,8 +1,9 @@
-.header ul{
-   padding: 0;
-   width:100%;
+.header ul {
+    padding: 0;
+    width: 100%;
     display: flex;
     max-width: 100%;
+    margin-top: 0;
     gap: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -10,27 +11,30 @@
     z-index: 2;
     justify-content: center;
     border-bottom: 10px solid rgba(2, 66, 87, 0.324);
-} 
- .header li, a{
+}
+
+.header li,
+a {
     font-size: 20px;
     font-weight: 600;
     list-style: none;
     text-decoration: none;
     color: rgb(0, 69, 90);
     background-color: rgb(255, 255, 255);
-    height:max-content;
+    height: max-content;
     border-radius: 10px;
     padding: 10px;
-   
-    
-} 
- @media screen and (max-width:800px) { 
+
+
+}
+
+@media screen and (max-width:800px) {
     .header ul {
-     display: flex;
-     flex-direction: row;
-     justify-content: left;
-     
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+
 
     }
-    
+
 }
