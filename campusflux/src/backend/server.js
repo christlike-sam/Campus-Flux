@@ -67,6 +67,8 @@ app.post('/signup', (req, res) => {
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
     const sql = 'SELECT * FROM signup WHERE email = ? AND password = ?';
+    'INSERT INTO login (email, password) VALUES (?, ?)';
+    
     db.query(sql, [email, password], (err, results) => {
         if (err) {
             return res.status(500).send({ error: err });
