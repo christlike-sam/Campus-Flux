@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "src\\components\\Newform.jsx",
               "ToolTip": "C:\\Users\\USER\\Desktop\\CampusFlux\\campusflux\\src\\components\\Newform.jsx",
               "RelativeToolTip": "src\\components\\Newform.jsx",
-              "ViewState": "AQIAAHsAAAAAAAAAAADwv50AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHwAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2024-08-13T13:25:58.378Z",
               "EditorCaption": ""
@@ -53,6 +53,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2024-08-13T14:04:48.62Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
