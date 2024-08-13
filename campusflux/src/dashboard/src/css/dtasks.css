@@ -1,0 +1,23 @@
+.tasks{
+    min-height: 60vh;
+    margin-top: 100px;
+    display: flex;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(3, 94, 3);
+    justify-content: center;
+    align-items: center;
+}
+.tasks p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 5px solid;
+    border-radius: 20%;
+    height: 250px;
+    background-color: rgb(3, 94, 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}

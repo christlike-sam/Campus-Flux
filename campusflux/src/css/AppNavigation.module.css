@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#root {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(0, 69, 90);
+    /* border-radius: 0px 0px 30% 30%; */
+    color: white;
+    height: 100px;
+}
+
+    .header h1 {
+        margin-left: 10px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+.nav {
+  float: right;
+  display: flex;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 20px;
+  right: 90px;
+  text-decoration: none;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  z-index: 7;
+}
+
+.nav a {
+  text-align: center;
+  overflow: hidden;
+  color: azure;
+  padding-inline: 10px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  z-index: 10;
+  width: max-content;
+}
+.nav a.icon{
+  width: max-content;
+}
+.nav a:hover {
+  border-radius: 7px;
+  background-color: rgb(2, 128, 128);
+  
+}
+
+.nav .icon {
+  display: none;
+}
+
+/* Hide navigation items on small screens */
+@media screen and (max-width: 960px) {
+  .nav ul {
+    flex-direction: column;
+    display: none;
+    background-color: rgb(0, 69, 90);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+    padding: 60px;
+    opacity: 90%;
+      }
+
+  .nav.open ul {
+    display: flex;
+  }
+
+  .nav a {
+    display: block;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .nav .icon {
+    display: inline-block;
+    position: absolute;
+    left:10px;
+  }
+
+  .nav.open .icon {
+    position: absolute;
+    top: auto;
+    right: 0;
+  }
+}
+
+.nav a:active {
+  background-color: rgb(17, 150, 84);
+  color: rgb(255, 255, 255);
+}

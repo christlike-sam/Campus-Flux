@@ -1,0 +1,68 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.profile-left,
+.profile-right {
+  width: 58%;
+
+}
+.form-group input i{
+  color: white;
+}
+.profile-pic-circle {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.form-group {
+  margin: 10px;
+}
+
+.form-group input {
+  height: 30px;
+  border-radius: 9px;
+  width: 200px;
+  color: white;
+  background-color: rgb(0, 69, 90);
+  border: rgb(0, 69, 90);
+}
+
+::-webkit-file-upload-button {
+  margin: 5px;
+
+}
+
+.save-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  display: flex;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.save-button:hover {
+  /* background-color: darken(var(--primary-color), 10%); */
+}
+
+/* Additional styles for responsive design and other elements */

@@ -1,0 +1,40 @@
+.contact {
+    min-height: 100vh;
+}
+.box {
+    column-count: 2;
+    display: flow-root;
+    margin: 10px;
+    padding: 10px;
+    flex-wrap:wrap;
+    font-size:20px;
+}
+
+.leftbox {
+    background-color: rgb(0 69 90);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 0px 90px;
+    height:300px;
+}
+
+.rightbox {
+    background-color: rgb(0 69 90);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 80px 0px 0px;
+    height: 300px;
+}
+
+    .rightbox ul {
+        list-style: circle;
+    }
+    .contact p{
+        margin:20px;
+        text-align:justify;
+        font-weight:500;
+    }

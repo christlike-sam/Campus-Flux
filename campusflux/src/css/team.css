@@ -1,23 +1,24 @@
-.team{
+.team {
     display: flex;
     position: relative;
     flex-direction: column;
     z-index: 8;
     min-height: 100vh;
-    border-top: 50px solid;
-    border-bottom: 50px solid;
-    border-color: rgb(15, 109, 126); 
-    background-color:white ;
+    border-top: 5px double;
+    border-color: rgb(15, 109, 126);
+    background-color: white;
+    border-bottom: 5px double;
+    margin-bottom: 10px;
 }
-.team h2{
-    color: rgb(255, 255, 255);
-    background-color: rgb(15, 109, 126);
-    height: 40px;
-    text-align: center;
-    align-content: center;
-    border-radius: 0px 40px 0px 40px;
-
-}
+    .team h2 {
+        color: rgb(255, 255, 255);
+        background-color: rgb(15, 109, 126);
+        height: 40px;
+        text-align: center;
+        align-content: center;
+        border-radius: 0px 40px 0px 40px;
+        
+    }
 .images{
     display:flex;
     justify-content:space-around;

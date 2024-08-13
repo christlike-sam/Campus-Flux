@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import "../css/Navigation.css"
+import "../css/navigation.module.css"
 import Home from './Home';
 import Dashboard from './Dashboard';
 import Signup from './Signup';
@@ -14,7 +14,7 @@ export default function Navbar() {
     <Router>
       <div>
         <div>
-          <nav className='nav'>
+          <nav>
             <ul className={navOpen ? 'open' : ''}>
               <li>
                 <Link to="/">Home</Link>

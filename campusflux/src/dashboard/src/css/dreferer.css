@@ -1,0 +1,34 @@
+.code{
+    margin-top: 100px;
+    text-align: center;
+    columns: 2;
+    color: rgb(6, 103, 25);
+    border:2px solid rgb(6, 103, 25);
+    column-rule: 2px solid rgb(6, 103, 25);
+}
+.code h2{
+    margin-top: 0;
+    font-size: 30px;
+    color:rgb(6, 103, 25);
+    padding-top: 20px;
+}
+.code p{
+    color:rgb(6, 103, 25);
+    padding-top: 20px;
+}
+.refer{
+    border-radius:1.5pc ;
+    height: 100vh;
+    border:1px  solid rgb(6, 103, 25);
+    text-align: center;
+   margin-top: 20px;
+}
+.refer h2{
+    margin: 0;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(6, 103, 25);
+    color: rgb(6, 103, 25);
+}

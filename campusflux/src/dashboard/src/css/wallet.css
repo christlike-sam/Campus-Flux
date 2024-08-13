@@ -1,0 +1,54 @@
+.wallet-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.balance-display {
+  margin-bottom: 20px;
+}
+
+.withdrawal-section {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.withdraw-button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.withdraw-button:hover {
+  background-color: green;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.notification-message {
+  color: green;
+  margin-bottom: 10px;
+}
