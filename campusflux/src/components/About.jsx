@@ -38,15 +38,22 @@ export default function About(){
                     </li>
                 </ul>
                 </div>
+
+
                 <div>
                     <h2>
                     Join Us Today!  
                     </h2>
+                   
                     <p>Be a part of the Campus Flux community and start earning from the comfort of your home. Whether you're a student looking for extra cash or a professional seeking flexible work options, Campus Flux is here to help you succeed.</p>
-                    
                 </div>
+                
+                    
+     
+                
                 <div>
-                <Contact />
+                    <Contact />
+         
                 <Plans />  
                 </div>
                 <Team/>

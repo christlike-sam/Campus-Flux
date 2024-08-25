@@ -1,24 +1,24 @@
-// Dheader.jsx
-import React, { useContext, useState } from 'react';
-import AuthContext from './AuthContext.jsx';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAuth, signOut } from 'firebase/auth';
 import styles from '../css/DashHeader.module.css';
 import logo from './cflogo.png';
 
 export default function Dheader({ onNavClick }) {
-    const { user } = useContext(AuthContext);
-    const navigate = useNavigate();
-    const auth = getAuth();
+    const [user, setUser] = useState(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const navigate = useNavigate();
 
-    const handleLogout = async () => {
-        try {
-            await signOut(auth);
-            navigate('/login');
-        } catch (error) {
-            console.error('Logout error:', error.message);
-        }
+    // Load user data from local storage on component mount
+    useEffect(() => {
+        const storedUser = JSON.parse(localStorage.getItem('user'));
+        setUser(storedUser);
+    }, []);
+
+    const handleLogout = () => {
+        // Clear user data from local storage and update state
+        localStorage.removeItem('user');
+        setUser(null);
+        navigate('/login');
     };
 
     return (

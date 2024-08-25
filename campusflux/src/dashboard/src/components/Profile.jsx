@@ -1,54 +1,60 @@
-import React, { useState } from 'react';
-import { storage } from './firebaseConfig';
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import React, { useState, useEffect } from 'react';
 import '../css/profile.css';
 
 export default function Profile({ user, updateUser }) {
-    const [username, setUsername] = useState(user.username || '');
-    const [profilePicture, setProfilePicture] = useState(user.profilePicture || '');
-    const [address, setAddress] = useState(user.address || '');
-    const [phoneNumber, setPhoneNumber] = useState(user.phoneNumber || '');
-    const [dateOfBirth, setDateOfBirth] = useState(user.dateOfBirth || '');
-    const [uploadProgress, setUploadProgress] = useState(0);
+    const [username, setUsername] = useState('');
+    const [profilePicture, setProfilePicture] = useState('');
+    const [address, setAddress] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [dateOfBirth, setDateOfBirth] = useState('');
 
-    const handleProfilePictureChange = async (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            if (!user.id) {
-                console.error('User ID is missing. Unable to upload profile picture.');
+    // Fetch user data from local storage on component mount
+    useEffect(() => {
+        const fetchUserData = () => {
+            if (!user || !user.uid) {
+                console.error('User ID is missing. Unable to fetch profile data.');
                 return;
             }
 
-            const timestamp = Date.now();
-            const storageRef = ref(storage, `profilePictures/${user.id}-${timestamp}`);
+            const storedUserData = JSON.parse(localStorage.getItem(`user_${user.uid}`));
+            if (storedUserData) {
+                setUsername(storedUserData.username || '');
+                setProfilePicture(storedUserData.profilePicture || '');
+                setAddress(storedUserData.address || '');
+                setPhoneNumber(storedUserData.phoneNumber || '');
+                setDateOfBirth(storedUserData.dateOfBirth || '');
+            } else {
+                console.log('No user data found in local storage.');
+            }
+        };
 
-            const uploadTask = uploadBytesResumable(storageRef, file);
+        fetchUserData();
+    }, [user]);
 
-            uploadTask.on(
-                'state_changed',
-                (snapshot) => {
-                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                    setUploadProgress(progress);
-                },
-                (error) => {
-                    console.error('Error uploading profile picture:', error);
-                },
-                async () => {
-                    try {
-                        const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-                        setProfilePicture(downloadURL);
-                        await updateUser({ ...user, profilePicture: downloadURL });
-                    } catch (error) {
-                        console.error('Error getting profile picture URL:', error);
-                    }
-                }
-            );
+    const handleProfilePictureChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            // Simulate a file upload and use a placeholder image URL
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setProfilePicture(reader.result);
+            };
+            reader.readAsDataURL(file);
         }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        updateUser({ ...user, username, address, phoneNumber, dateOfBirth });
+        const updatedUser = {
+            ...user,
+            username,
+            address,
+            phoneNumber,
+            dateOfBirth,
+            profilePicture,
+        };
+        localStorage.setItem(`user_${user.uid}`, JSON.stringify(updatedUser));
+        updateUser(updatedUser);
     };
 
     return (
@@ -64,7 +70,6 @@ export default function Profile({ user, updateUser }) {
                     accept="image/*"
                     onChange={handleProfilePictureChange}
                 />
-                {uploadProgress > 0 && <p>Upload Progress: {Math.round(uploadProgress)}%</p>}
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label>Username</label>
@@ -98,7 +103,7 @@ export default function Profile({ user, updateUser }) {
                             onChange={(e) => setDateOfBirth(e.target.value)}
                         />
                     </div>
-                    
+
                     <button type="submit" className="save-button">Update</button>
                 </form>
             </div>

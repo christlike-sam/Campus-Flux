@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../dashboard/src/components/firebaseConfig';  // Adjust the path as needed
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import Dash from '../dashboard/src/Dash.jsx';  // Adjust the path as needed
 import '../css/signup.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const Newform = ({ formType }) => {
+const Newform = ({ formType, onSignIn }) => {
     const [isSignUpActive, setIsSignUpActive] = useState(formType === 'signup');
     const navigate = useNavigate();
 
@@ -26,8 +23,7 @@ const Newform = ({ formType }) => {
         <div className={`container ${isSignUpActive ? 'sign-up-mode' : ''}`}>
             <div className="forms-container">
                 <div className="signin-signup">
-                    <SignInForm />
-                    <SignUpForm />
+                    {isSignUpActive ? <SignUpForm onSignIn={onSignIn} /> : <SignInForm onSignIn={onSignIn} />}
                 </div>
             </div>
             <div className="panels-container">
@@ -54,21 +50,21 @@ const Newform = ({ formType }) => {
     );
 };
 
-const SignInForm = () => {
+const SignInForm = ({ onSignIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        try {
-            await signInWithEmailAndPassword(auth, email, password);
-            alert('Signin successful!');
-            console.log('Signin successful')
-            navigate('/Dash');  // Adjust the route as needed
-        } catch (error) {
-            console.error('Error signing in:', error.message);
-            alert('Error signing in: ' + error.message);
+        const storedEmail = localStorage.getItem('userEmail');
+        const storedPassword = localStorage.getItem('userPassword');
+
+        if (email === storedEmail && password === storedPassword) {
+            onSignIn(); // Notify App of successful sign-in
+            navigate('/dash');  // Redirect to dashboard
+        } else {
+            alert('Invalid credentials');
         }
     };
 
@@ -98,21 +94,19 @@ const SignInForm = () => {
     );
 };
 
-const SignUpForm = () => {
+const SignUpForm = ({ onSignIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        try {
-            await createUserWithEmailAndPassword(auth, email, password);
-            alert('Signup successful! Redirecting to login page...');
-            navigate('/login');  // Adjust the route as needed
-        } catch (error) {
-            console.error('Error signing up:', error.message);
-            alert('Error signing up: ' + error.message);
-        }
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userPassword', password);
+
+        onSignIn(); // Notify App of successful sign-up and sign-in
+        alert('Signup successful! Redirecting to login page...');
+        navigate('/login');  // Redirect to login
     };
 
     return (

@@ -1,10 +1,8 @@
-// firebaseConfig.js
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getStorage } from "firebase/storage";
+import { getFirestore, doc, getDoc, enableIndexedDbPersistence } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore"; // Import Firestore
 
+// Firebase configuration object
 const firebaseConfig = {
     apiKey: "AIzaSyDyrgbH5ZYYtaEzqppfogDNNdAjEeILNEY",
     authDomain: "campus-flux.firebaseapp.com",
@@ -17,18 +15,35 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-console.log('Firebase App Initialized:', app);
-
-const analytics = getAnalytics(app);
-console.log('Firebase Analytics:', analytics);
-
-const storage = getStorage(app);
-console.log('Firebase Storage:', storage);
-
-const auth = getAuth(app);
-console.log('Firebase Auth:', auth);
-
 const db = getFirestore(app);
-console.log('Firebase Firestore:', db);
+const auth = getAuth(app);
 
-export { app, analytics, storage, auth, db };
+// Enable offline persistence
+enableIndexedDbPersistence(db)
+    .catch((err) => {
+        if (err.code === 'failed-precondition') {
+            console.error("Persistence failed: multiple tabs open.");
+        } else if (err.code === 'unimplemented') {
+            console.error("Persistence is not available.");
+        }
+    });
+
+// Function to get user document
+const getUserDocument = async (uid) => {
+    try {
+        const userDocRef = doc(db, 'users', uid);
+        const docSnapshot = await getDoc(userDocRef);
+
+        if (docSnapshot.exists()) {
+            return docSnapshot.data();
+        } else {
+            console.log('No such document!');
+            return null;
+        }
+    } catch (error) {
+        console.error('Error fetching user document:', error.message);
+        throw error;
+    }
+};
+
+export { app, db, auth, getUserDocument };

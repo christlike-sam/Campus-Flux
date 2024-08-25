@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\campusflux",
+    "\\campusflux\\public",
+    "\\campusflux\\src\\components",
+    "\\campusflux\\src\\css",
+    "\\campusflux\\src\\dashboard",
+    "\\campusflux\\src\\dashboard\\src",
+    "\\campusflux\\src\\dashboard\\src\\css"
   ],
+  "SelectedNode": "\\campusflux\\index.html",
   "PreviewInSolutionExplorer": false
 }
